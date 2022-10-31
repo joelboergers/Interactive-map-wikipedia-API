@@ -1,0 +1,60 @@
+export interface Country{
+    "Nom pays": String;
+    'Population, total': Année[];
+    'Croissance de la population (%annuel)': Année[];
+    'Superficie (kilomètres carrés)': Année[];
+    'Ratio de la population pauvre en fonction du seuil de pauvreté national (%de la population)': Année[]; 
+    'Espérance de vie à la naissance, total (années)': Année[];
+    'Taux de fertilité, total (naissances par femme)': Année[];
+    'Taux de mortalité infantile, moins de 5 ans (pour 1000)': Année[]; 
+    'Taux d’achèvement de l’école primaire, total (%du groupe d’âge pertinent)': Année[]; 
+    'Inscriptions à l’école, secondaire (%brut)': Année[];
+    'Émissions de CO2 (tonnes métriques par habitant)': Année[]; 
+    'Consommation d’électricité (KWh par habitant)': Année[];
+    'PIB (Dollar US courants)': Année[];
+    'Croissance du PIB (%annuel)': Année[];
+    'Exportations de biens et de services (%du PIB)': Année[]; 
+    'Importations de biens et de services (%du PIB)': Année[];
+    'Revenus, hors subventions (%du PIB)': Année[];
+    'Dépenses militaires (%du PIB)': Année[];
+    'PIB par habitant (Dollar US courants)': Année[]; 
+    'Inflation, prix à la consommation (%annuel)': Année[]; 
+    'Utilisation d’énergie (kg d’équivalent pétrole par habitant)': Année[]; 
+    'Travail des enfants, travail salarié (en % de toutes les formes d’emploi chez les enfants de7 à 14ans)': Année[]; 
+    'Tourisme international, nombre d’arrivées': Année[];
+    'Total des réserves (comprend l’or, Dollar US courants)': Année[]; 
+    'Territoire (km carrés)': Année[];
+    'Taux d’alphabétisation, total des adultes (%des personnes âgées de 15 ans et plus)': Année[]; 
+    'Sécheresses, inondations, températures extrêmes (en % de la population, moyenne de 1990 à 2009)': Année[]; 
+    'Risque de décès maternel au cours d’une vie (%)': Année[];
+    'Revenus fiscaux (%du PIB)': Année[];
+    'Ratio filles garçons des inscriptions au secondaire (%)': Année[]; 
+    'Ratio élève-enseignant au secondaire': Année[];
+    'Production d’électricité renouvelable (% de la production totale d’électricité)': Année[]; 
+    'Probability of dying among children ages 5-9 years (per 1,000)': Année[];
+    'Probability of dying among adolescents ages 10-14 years (per 1,000)': Année[];
+    'Prix à la pompe de l’essence (Dollar US par litre)': Année[];
+    'Prevalence of severe food insecurity in the population (%)': Année[]; 
+    'Prévalence de la sous-alimentation (%de la population)': Année[];
+    'Population urbaine (%du total)': Année[];
+    'Population de la ville la plus peuplée': Année[];
+}
+
+export interface Année {
+    2000: String;
+    2001: String;
+    2002: String;
+    2003: String;
+    2004: String;
+    2005: String;
+    2006: String;
+    2007: String;
+    2008: String;
+    2009: String;
+    2010: String;
+    2011: String;
+    2012: String;
+    2013: String;
+    2014: String;
+    2015: String;
+}

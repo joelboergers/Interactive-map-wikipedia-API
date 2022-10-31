@@ -1,0 +1,15 @@
+<form>
+  <input type="text"
+    placeholder="Rechercher un pays"
+    [formControl]="control"
+    list="countries"
+    [(ngModel)] = "countryInput">
+    <datalist id="countries" >
+      <option *ngFor="let country of filteredCountries | async">
+        {{country}}
+      </option>
+    </datalist>
+  <button type="submit" (click)="affichageOn()" (click)="filterCountryByInputValue()" >Rechercher</button>
+  <app-info-pays [item]="loadedCountryByResearch" *ngIf="affichage" (closeMessage)="affichageOff()"></app-info-pays>
+</form>
+  

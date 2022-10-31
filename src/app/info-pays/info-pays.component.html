@@ -1,0 +1,124 @@
+<div class="background" (click)="affichageOff()"></div>
+<div class="alert-box">
+    <div class="selction_annee">
+        <span>Selectionnez l'année a la quelle vous voulez afficher les données </span>
+        <select name="annee" id="annee" (click)="setAnnee();">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+        </select>
+    </div>
+    <br>
+    <div class="data overflow-auto" *ngFor="let data of item">
+        <p>Nom du Pays: <b>{{data['Nom pays']}}</b></p>
+        <div class="container ">
+            <div class="row overflow-auto mw-100">
+                <div class="col-4 ">
+
+                    <p>Population total:
+                        <b> {{data['Population, total'][curValue.toString()]}} </b> </p>
+                    <p>Croissance de la population (%annuel):
+                        <b> {{data['Croissance de la population (%annuel)'][curValue.toString()]}} </b> </p>
+                    <p>Superficie (kilomètres carrés):
+                        <b> {{data['Superficie (kilomètres carrés)'][curValue.toString()]}} </b> </p>
+                    <p>Ratio de la population pauvre en fonction du seuil de pauvreté national (%de la population):
+                        <b> {{data['Ratio de la population pauvre en fonction du seuil de pauvreté national (%de la population)'][curValue.toString()]}} </b> </p>
+                    <p>Espérance de vie à la naissance, total (années):
+                        <b> {{data['Espérance de vie à la naissance, total (années)'][curValue.toString()]}} </b> </p>
+                    <p>Taux de fertilité, total (naissances par femme):
+                        <b> {{data['Taux de fertilité, total (naissances par femme)'][curValue.toString()]}} </b> </p>
+                    <p>Taux de mortalité infantile, moins de 5 ans (pour 1000):
+                        <b> {{data['Taux de mortalité infantile, moins de 5 ans (pour 1000)'][curValue.toString()]}} </b> </p>
+                    <p>Taux d’achèvement de l’école primaire, total (%du groupe d’âge pertinent):
+                        <b> {{data['Taux d’achèvement de l’école primaire, total (%du groupe d’âge pertinent)'][curValue.toString()]}} </b> </p>
+                    <p>Inscriptions à l’école, secondaire (%brut):
+                        <b> {{data['Inscriptions à l’école, secondaire (%brut)'][curValue.toString()]}} </b> </p>
+                    <p>Émissions de CO2 (tonnes métriques par habitant):
+                        <b> {{data['Émissions de CO2 (tonnes métriques par habitant)'][curValue.toString()]}} </b> </p>
+                    <p>Consommation d’électricité (KWh par habitant):
+                        <b> {{data['Consommation d’électricité (KWh par habitant)'][curValue.toString()]}} </b> </p>
+                    <p>PIB (Dollar US courants):
+                        <b> {{data['PIB (Dollar US courants)'][curValue.toString()]}} </b> </p>
+                    <p>Croissance du PIB (%annuel):
+                        <b> {{data['Croissance du PIB (%annuel)'][curValue.toString()]}} </b> </p>
+                    <p>Exportations de biens et de services (%du PIB):
+                        <b> {{data['Exportations de biens et de services (%du PIB)'][curValue.toString()]}} </b> </p>
+                    <p>Importations de biens et de services (%du PIB):
+                        <b> {{data['Importations de biens et de services (%du PIB)'][curValue.toString()]}} </b> </p>
+                    <p>Revenus, hors subventions (%du PIB):
+                        <b> {{data['Revenus, hors subventions (%du PIB)'][curValue.toString()]}} </b> </p>
+                    <p>Dépenses militaires (%du PIB):
+                        <b> {{data['Dépenses militaires (%du PIB)'][curValue.toString()]}} </b> </p>
+                    <p>PIB par habitant (Dollar US courants):
+                        <b> {{data['PIB par habitant (Dollar US courants)'][curValue.toString()]}} </b> </p>
+                    <p>Inflation, prix à la consommation (%annuel):
+                        <b> {{data['Inflation, prix à la consommation (%annuel)'][curValue.toString()]}} </b> </p>
+                    <p>Utilisation d’énergie (kg d’équivalent pétrole par habitant):
+                        <b> {{data['Utilisation d’énergie (kg d’équivalent pétrole par habitant)'][curValue.toString()]}} </b> </p>
+                </div>
+
+                <div class="col-4 ">
+                    <p>Travail des enfants, travail salarié (en % de toutes les formes d’emploi chez les enfants de7 à 14ans):
+                        <b> {{data['Travail des enfants, travail salarié (en % de toutes les formes d’emploi chez les enfants de7 à 14ans)'][curValue.toString()]}} </b> </p>
+                    <p>Tourisme international, nombre d’arrivées:
+                        <b> {{data['Tourisme international, nombre d’arrivées'][curValue.toString()]}} </b> </p>
+                    <p>Total des réserves (comprend l’or, Dollar US courants):
+                        <b> {{data['Total des réserves (comprend l’or, Dollar US courants)'][curValue.toString()]}} </b> </p>
+                    <p>Territoire (km carrés):
+                        <b> {{data['Territoire (km carrés)'][curValue.toString()]}} </b> </p>
+                    <p>Taux d’alphabétisation, total des adultes (%des personnes âgées de 15 ans et plus):
+                        <b> {{data['Taux d’alphabétisation, total des adultes (%des personnes âgées de 15 ans et plus)'][curValue.toString()]}} </b> </p>
+                    <p>Sécheresses, inondations, températures extrêmes (en % de la population, moyenne de 1990 à 2009):
+                        <b> {{data['Sécheresses, inondations, températures extrêmes (en % de la population, moyenne de 1990 à 2009)'][curValue.toString()]}} </b> </p>
+                    <p>Risque de décès maternel au cours d’une vie (%):
+                        <b> {{data['Risque de décès maternel au cours d’une vie (%)'][curValue.toString()]}} </b> </p>
+                    <p>Revenus fiscaux (%du PIB):
+                        <b> {{data['Revenus fiscaux (%du PIB)'][curValue.toString()]}} </b> </p>
+                    <p>Ratio filles garçons des inscriptions au secondaire (%):
+                        <b> {{data['Ratio filles garçons des inscriptions au secondaire (%)'][curValue.toString()]}} </b> </p>
+                    <p>Ratio élève-enseignant au secondaire:
+                        <b> {{data['Ratio élève-enseignant au secondaire'][curValue.toString()]}} </b> </p>
+                    <p>Production d’électricité renouvelable (% de la production totale d’électricité):
+                        <b> {{data['Production d’électricité renouvelable (% de la production totale d’électricité)'][curValue.toString()]}} </b> </p>
+                    <p>Probability of dying among children ages 5-9 years (per 1,000):
+                        <b> {{data['Probability of dying among children ages 5-9 years (per 1,000)'][curValue.toString()]}} </b> </p>
+                    <p>Probability of dying among adolescents ages 10-14 years (per 1,000):
+                        <b> {{data['Probability of dying among adolescents ages 10-14 years (per 1,000)'][curValue.toString()]}} </b> </p>
+                    <p>Prix à la pompe de l’essence (Dollar US par litre):
+                        <b> {{data['Prix à la pompe de l’essence (Dollar US par litre)'][curValue.toString()]}} </b> </p>
+                    <p>Prevalence of severe food insecurity in the population (%):
+                        <b> {{data['Prevalence of severe food insecurity in the population (%)'][curValue.toString()]}} </b> </p>
+                    <p>Prévalence de la sous-alimentation (%de la population):
+                        <b> {{data['Prévalence de la sous-alimentation (%de la population)'][curValue.toString()]}} </b> </p>
+                    <p>Population urbaine (%du total):
+                        <b> {{data['Population urbaine (%du total)'][curValue.toString()]}} </b> </p>
+                    <p>Population de la ville la plus peuplée:
+                        <b> {{data['Population de la ville la plus peuplée'][curValue.toString()]}} </b> </p>
+                </div>
+                <div class="col ">
+                   <app-wiki [searchTerm] = "data['Nom pays']"></app-wiki>
+                </div>
+            </div>
+        </div>
+        
+               
+    </div>
+    
+    <button class="btn btn-info" (click)="affichageOff()">Fermer</button>
+</div>
+
+
+

@@ -1,0 +1,4 @@
+.row{
+    max-height: 75.5vh;
+    overflow-y: scroll;
+}

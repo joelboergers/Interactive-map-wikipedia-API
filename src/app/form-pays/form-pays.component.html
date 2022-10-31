@@ -1,0 +1,89 @@
+<div class="container">
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="researchedDomain">Domaine de recherche</label>
+        <select 
+            [(ngModel)]="researchedDomain"
+            class="form-control" 
+            id="researchedDomain"
+            name="researchedDomain">
+            <option
+                *ngFor="let domain of domains"
+                [value]="domain"
+            >
+            {{domain}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-6">
+                <label for="researchedMin">Valeur minimum</label>
+                <input
+                    [(ngModel)]="researchedMin"
+                    type="text"
+                    class="form-control"
+                    id="researchedMin"
+                    placeholder="valeur minimum"
+                    name="researchedMin"
+                />
+            </div>
+            <div class="col-6">
+                <label for="researchedMax">Valeur maximum</label>
+                <input
+                    [(ngModel)]="researchedMax"
+                    type="text"
+                    class="form-control"
+                    id="researchedMax"
+                    placeholder="valeur maximum"
+                    name="researchedMax"
+                />                
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-6">
+                <label for="researchedYear">Année</label>
+                <select 
+                    [(ngModel)]="researchedYear"
+                    class="form-control" 
+                    id="researchedYear"
+                    name="researchedYear">
+                    <option 
+                        *ngFor="let year of years"
+                        [value]="year"
+                    >
+                    {{year}}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <button type="submit" id="submit">Rechercher</button>
+</form>
+</div>
+<div class="container" id="result">
+    <h3 *ngIf="foundCountries.length > 0">
+        Voici les pays ayant le domaine "{{researchedDomain}}"
+        avec comme minimum {{researchedMin}} et comme maximum {{researchedMax}} 
+        en l'an {{researchedYear}}
+    </h3>
+    <h3 *ngIf="foundCountries.length == 0 
+                && submitted">
+        Désolé, mais aucun pays n'a de valeur entre 
+        {{researchedMin}} et {{researchedMax}} dans 
+        le domaine {{researchedDomain}} 
+        en l'an {{researchedYear}}
+    </h3>
+      <div class="list-group col-3 flex">
+        <a style="cursor: pointer;"
+          class="list-group-item"
+          *ngFor="let country of foundCountries"
+          (click)="getCountrieId($event)"
+          (click)="affichageOn()" >
+          {{country}}
+        </a>
+        <app-info-pays [item] = "loadedCountryByClick" *ngIf="affichage" (closeMessage)="affichageOff()"></app-info-pays>
+      </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="background" *ngIf="stop">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" 
+            role="progressbar" 
+            aria-valuemin="0" 
+            aria-valuemax="100" 
+            [ngStyle]="{'width': progresseBarValue + '%'}">{{progresseBarValue}} %
+      </div>
+    </div>
+  </div>
+  <h2>Pays</h2>
+  <div class="row">
+    <div class="col-auto">
+      <div class="list-group ">
+        <a style="cursor: pointer;"
+          class="list-group-item"
+          *ngFor="let data of countries"
+          (click)="getCountrieId($event)"
+          (click)="affichageOn()" >
+          {{data}}
+        </a>
+        <app-info-pays [item] = "loadedCountryByClick" *ngIf="affichage" (closeMessage)="affichageOff()"></app-info-pays>
+      </div>
+    </div>
+  </div>
+</div>
